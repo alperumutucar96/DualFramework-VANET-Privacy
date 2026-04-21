@@ -116,31 +116,7 @@ Hard Privacy  (Eq. 11-16)
   Step 9  N vehicles each decrypt 3 weights (<=8 threads)
   Step 10 ACK link delay (V -> RSU, 64 bytes)
  
---------------------------------------------------------------------------------
-6. PAYLOAD SIZE CONSTANTS
---------------------------------------------------------------------------------
- 
-  Constant   Value    Description
-  ---------  -------  -----------------------------------------------
-  B_RSA      128 B    RSA-1024 ciphertext (blind signature)
-  B_ABE      168 B    ABE bundle: KEM(128) + IV(16) + data(8) + tag(16)
-  B_PAIL     256 B    Paillier-1024 ciphertext (2048-bit number)
-  B_ZKP      384 B    Schnorr proof: pub + R + s  (3 x 128 B)
-  B_STRAT    128 B    Driving strategy packet
- 
---------------------------------------------------------------------------------
-7. KEY RESULTS  (Windows build, MSYS2 MinGW-64)
---------------------------------------------------------------------------------
- 
-  N      Soft Fast (ms)   Soft Slow (ms)   Hard (ms)   Hard/Soft ratio
-  -----  ---------------  ---------------  ----------  ---------------
-    5         10.31             2.59          38.47          3.7x
-   10          5.81             2.70          60.34         10.4x
-   25         13.28             2.58          48.36          3.6x
-   50         21.78             2.61          94.66          4.3x
-  100         34.15             2.67         184.01          5.4x
-  250         65.52             2.66         434.07          6.6x
-  500        108.74             2.62         736.09          6.8x
+
  
 
  
